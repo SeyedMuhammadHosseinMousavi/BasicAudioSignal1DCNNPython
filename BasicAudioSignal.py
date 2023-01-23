@@ -21,7 +21,7 @@ import warnings
 # Suppressing All Warnings
 warnings.filterwarnings("ignore")
 
-# Read Ausio Signals
+# Read Audio Signals
 ClassA = [
     librosa.load(p)[0] for p in Path().glob('Data/A*.wav')
 ]
@@ -32,7 +32,7 @@ ClassC = [
     librosa.load(p)[0] for p in Path().glob('Data/C*.wav')
 ]
 
-# Extract Ausio Features 
+# Extract Audio Features 
 def extract_featuresSC(signal):
     return [
         librosa.feature.spectral_centroid(signal)[0],
